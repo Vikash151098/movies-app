@@ -1,0 +1,28 @@
+.movie-date {
+    color: white;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid white;
+    background-color: rgba(14, 10, 10, 0.25);
+    width: 4.5rem;
+    /* margin: 0.5rem; */
+    padding: 0.5rem;
+}
+
+.movie-date_month {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.movie-date_year {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+.movie-date_day {
+    font-size: 30px;
+    font-weight: bold;
+}
