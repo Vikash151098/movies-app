@@ -1,7 +1,12 @@
-import { createStore } from 'redux';
-import PostsReducer from '../reducers/index'
+import { createStore, applyMiddleware, combineReducers, } from 'redux';
+import { MoviesReducer, OrderSelectReducer } from '../reducers/index'
+import thunk from 'redux-thunk';
 
-const store = createStore(PostsReducer);
+const store = createStore(combineReducers({
+    MoviesReducer,
+    OrderSelectReducer
+}),
+    applyMiddleware(thunk));
 
 export default store;
 

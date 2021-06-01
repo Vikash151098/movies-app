@@ -1,10 +1,9 @@
 import MovieItem from "./MovieItem"
 // import styles from './MovieItem.module.css';
-import './MovieList.css'
+import './MovieList.scss'
 
 const MovieList = (props) => {
     const clickHandler = (id) => {
-        console.log("click");
         props.onClick(id);
     }
 

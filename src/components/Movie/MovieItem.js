@@ -1,22 +1,23 @@
-import './MovieItem.css';
+import './MovieItem.scss';
+import '../../index.scss';
 import Card from '../UI/Card';
 import MovieDate from './MovieDate';
 
 
 const MovieItem = (props) => {
     const movie = props.movie;
-    // console.log("movie", movie);
     const clickHandler = () => {
         props.onClick(movie.id);
     }
     return (
         <li onClick={clickHandler}>
-            <Card className="movies-item">
-                <MovieDate date={movie.releaseDate} />
+            <Card className="movies-item ">
                 <div className="movies-item_description">
-                    <h2 >{movie.title}</h2>
-                    <div className="movies-item_img"><img src={movie.imageUrl} alt={movie.title} /></div>
+                    <img className="movies-item_img" src={movie.imageUrl} alt={movie.title} />
+                    <h2>{movie.title} <p>Rank-{movie.rank}</p></h2>
+
                 </div>
+                <MovieDate date={movie.releaseDate} />
             </Card>
         </li>
 

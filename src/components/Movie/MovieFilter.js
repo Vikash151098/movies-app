@@ -1,18 +1,17 @@
-import './MovieFilter.css';
+import './MovieFilter.scss';
 
 const MovieFilter = (props) => {
 
-    const yearSelectHandler = (e) => {
-        props.onChangeFilter(e.target.value.toString());
+    const selectHandler = (e) => {
+        props.onChangeFilter(e.target.value);
     }
     return (
         <div className='movies-filter'>
             <div className='movies-filter__control'>
                 <label>Top 5 Movies</label>
-                <select value={props.selected} onChange={yearSelectHandler}>
-                    <option value="select" > Select</option>
-                    <option value="releaseDate" > Sort By Release Date</option>
-                    <option value="rank"> Sort By Rank</option>
+                <select value={props.selected} onChange={selectHandler}>
+                    <option value="select" >Select</option>
+                    {props.orderSelectData.map((orderData) => <option key={orderData.valueToOrderBy} value={orderData.valueToOrderBy} >{orderData.label}</option>)}
                 </select>
             </div>
         </div>

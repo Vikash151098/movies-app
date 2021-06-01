@@ -1,9 +1,10 @@
-import { getMovie } from '../actions/index';
+import { getMovie, addOrderSelect } from '../actions/index';
 
 // http://localhost:3000/assets/data.json
+const baseURL = 'http://localhost:3000';
 
 const getData = (dispatch) => {
-    fetch('http://localhost:3000/assets/top5Movies.json'
+    fetch(baseURL + '/assets/top5Movies.json'
         , {
             headers: {
                 'Content-Type': 'application/json',
@@ -13,32 +14,12 @@ const getData = (dispatch) => {
     ).then(function (response) {
         return response.json();
     }).then(function (myJson) {
-        console.log(myJson);
-        dispatch(getMovie(myJson.components[1].items));
+        // console.log(myJson);
+        // dispatch(addOrderSelect(myJson.components[0]));
+        dispatch(getMovie(myJson.components));
     }).catch((err) => {
         console.log(err);
     });
-}
-
-
-const addData = (dispatch) => {
-
-    fetch("http://localhost:3000/assets/data.json", {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "id": 3,
-            "title": "Amrit",
-            "body": "Amrit kumar"
-        })
-    }).then(res => res.json())
-        .then(myJson => {
-            console.log(myJson);
-        }).catch((error) => {
-            console.error('Error:', error);
-        });
 }
 
 export { getData };

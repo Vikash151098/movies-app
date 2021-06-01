@@ -1,6 +1,6 @@
 
 
-function PostsReducer(state = [], action) {
+function MoviesReducer(state = [], action) {
     switch (action.type) {
         case 'GET_MOVIE':
             return action.payload;
@@ -13,4 +13,15 @@ function PostsReducer(state = [], action) {
     }
 }
 
-export default PostsReducer;
+function OrderSelectReducer(state = {}, action) {
+    switch (action.type) {
+        case 'ORDER_SELECT':
+            return action.payload;
+        case 'ORDER_SELECT_LIST':
+            return state.components.filter();
+        default:
+            return state
+    }
+}
+
+export { MoviesReducer, OrderSelectReducer };

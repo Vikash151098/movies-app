@@ -1,0 +1,45 @@
+.movie-full-view {
+  color: #c9c3c3;
+  text-align: center;
+  clear: both;
+
+  p {
+    font-style: italic;
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+
+  #poster {
+    width: 30vw;
+    border-radius: 1rem;
+  }
+
+  h2 {
+    color: #e1ec41;
+    margin: 0.5rem 0;
+  }
+
+  #rank {
+    font-size: 5vw;
+    display: grid;
+    color: #9fd8e9;
+  }
+
+  #releaseDate {
+    font-size: 3vw;
+    color: aqua;
+  }
+}
+
+.back-arrow {
+  img {
+    width: 5vw;
+    float: left;
+    background-color: white;
+    border-radius: 100%;
+  }
+}
+
+.back-arrow:hover {
+  cursor: pointer;
+}

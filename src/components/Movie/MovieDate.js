@@ -1,4 +1,4 @@
-import './MovieDate.css'
+import './MovieDate.scss'
 
 const MovieDate = (props) => {
 
