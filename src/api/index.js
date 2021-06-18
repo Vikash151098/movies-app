@@ -1,6 +1,7 @@
 import { getMovie } from "../actions/index";
 
 // http://localhost:3000/assets/data.json
+// eslint-disable-next-line no-unused-vars
 const baseURL = "http://localhost:3000";
 
 const getData = (dispatch) => {
