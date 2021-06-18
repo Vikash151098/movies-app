@@ -1,28 +1,26 @@
 .movie-date {
-    color: white;
-    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
-    border-radius: 1vw;
-    text-align: center;
-    border: 1px solid white;
-    background-color: rgba(14, 10, 10, 0.25);
-    width: 10vw;
-    /* margin: 0.5rem; */
-    padding: 0.5vw;
+  color: white;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 1vw;
+  text-align: center;
+  border: 1px solid white;
+  background-color: rgba(14, 10, 10, 0.25);
+  width: 10vw;
+  /* margin: 0.5rem; */
+  padding: 0.5vw;
 }
 
 .movie-date_month {
-    font-size: 1vw;
-    font-weight: bold;
+  font-size: 1vw;
+  font-weight: bold;
 }
-
 
 .movie-date_year {
-    font-size: 2vw;
-    font-weight: bold;
+  font-size: 2vw;
+  font-weight: bold;
 }
 
-
 .movie-date_day {
-    font-size: 2rem;
-    font-weight: bold;
+  font-size: 2rem;
+  font-weight: bold;
 }
